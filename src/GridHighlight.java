@@ -54,8 +54,8 @@ public class GridHighlight {
 
         // Calculates the sum
         int sum = 0;
-        for (int i = 0; i < to_sum.length; i++) {
-            sum += to_sum[i];
+        for (int j : to_sum) {
+            sum += j;
         }
         return sum;
     }
@@ -72,10 +72,10 @@ public class GridHighlight {
     }
 
     public void printGrid(int[][] grid) {
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
-                System.out.print(grid[i][j] + " ");
-                if(j==grid[i].length-1){
+        for (int[] i : grid) {
+            for (int j = 0; j < i.length; j++) {
+                System.out.print(i[j] + " ");
+                if (j == i.length - 1) {
                     System.out.println();
                 }
             }
